@@ -22,7 +22,7 @@ firebase.initializeApp(firebaseConfig);
 database = firebase.database();
 
 // Firebase 정보 가져오기
-var ref = database.ref("smartFarm");
+var ref = database.ref("Test");
 ref.on("value", gotData, errData);
 
 function gotData(data) {
@@ -86,7 +86,7 @@ function ledOnOff() {
   const ledButton = document.getElementById('ledButton');
   if (ledStatus == false) {
     ledStatus = true;
-    var ref = database.ref('smartFarm');
+    var ref = database.ref('Test');
     ref.update({
       led: 1
     });
@@ -94,7 +94,7 @@ function ledOnOff() {
     ledButton.classList.remove("toggle-off");
   } else {
     ledStatus = false;
-    var ref = database.ref('smartFarm');
+    var ref = database.ref('Test');
     ref.update({
       led: 0
     });
@@ -108,7 +108,7 @@ function fanOnOff() {
   const fanButton = document.getElementById('fanButton');
   if (fanStatus == false) {
     fanStatus = true;
-    var ref = database.ref('smartFarm');
+    var ref = database.ref('Test');
     ref.update({
       fan: 1
     });
@@ -116,7 +116,7 @@ function fanOnOff() {
     fanButton.classList.remove("toggle-off");
   } else {
     fanStatus = false;
-    var ref = database.ref('smartFarm');
+    var ref = database.ref('Test');
     ref.update({
       fan: 0
     });
