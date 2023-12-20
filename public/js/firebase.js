@@ -1,5 +1,3 @@
-// This code was written by Juhyun Kim.
-
 let mois = 100;
 let temp = 50;
 let light = 100;
