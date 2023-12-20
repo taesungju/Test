@@ -7,20 +7,20 @@ let ledStatus = Boolean(false);
 
 // Firebase 접근 정보
 var firebaseConfig = {
-  apiKey: "AIzaSyD9LyL6kbowdFjTaFuhe7qWPq0XtNhf_8w",
-  authDomain: "test-ae783.firebaseapp.com",
-  databaseURL: "https://test-ae783-default-rtdb.firebaseio.com",
-  projectId: "test-ae783",
-  storageBucket: "test-ae783.appspot.com",
-  messagingSenderId: "36712753134",
-  appId: "1:36712753134:web:1b621f77e173fe4cfbd0ff",
+  apiKey: "AIzaSyA4JNrHtS9pc6QaW8dtwATWhUhs0Ni8OBI",
+  authDomain: "smartfarm-f867f.firebaseapp.com",
+  databaseURL: "https://smartfarm-f867f-default-rtdb.firebaseio.com",
+  projectId: "smartfarm-f867f",
+  storageBucket: "smartfarm-f867f.appspot.com",
+  messagingSenderId: "605663694333",
+  appId: "1:605663694333:web:ae528fa94efc794d285d94",
   measurementId: "G-9C54BH4QG4"
 };
 firebase.initializeApp(firebaseConfig);
 database = firebase.database();
 
 // Firebase 정보 가져오기
-var ref = database.ref("test");
+var ref = database.ref("smartFarm");
 ref.on("value", gotData, errData);
 
 function gotData(data) {
@@ -84,7 +84,7 @@ function ledOnOff() {
   const ledButton = document.getElementById('ledButton');
   if (ledStatus == false) {
     ledStatus = true;
-    var ref = database.ref('test');
+    var ref = database.ref('smartFarm');
     ref.update({
       led: 1
     });
@@ -92,7 +92,7 @@ function ledOnOff() {
     ledButton.classList.remove("toggle-off");
   } else {
     ledStatus = false;
-    var ref = database.ref('test');
+    var ref = database.ref('smartFarm');
     ref.update({
       led: 0
     });
@@ -106,7 +106,7 @@ function fanOnOff() {
   const fanButton = document.getElementById('fanButton');
   if (fanStatus == false) {
     fanStatus = true;
-    var ref = database.ref('test');
+    var ref = database.ref('smartFarm');
     ref.update({
       fan: 1
     });
@@ -114,7 +114,7 @@ function fanOnOff() {
     fanButton.classList.remove("toggle-off");
   } else {
     fanStatus = false;
-    var ref = database.ref('test');
+    var ref = database.ref('smartFarm');
     ref.update({
       fan: 0
     });
