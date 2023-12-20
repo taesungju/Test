@@ -1,7 +1,7 @@
 // GPS좌표 및 위치 리음 설정
 let lat = 0;
 let long = 0;
-let label = "쥬디다무 집"
+let label = "집"
 
 // Firebase 접근 정보
 var config = {
